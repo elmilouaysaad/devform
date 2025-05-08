@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSD to Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Form-specific styles */
+        .registration-form {
+            position: absolute;
+            z-index: 5;
+            width: 30%;
+            max-width: 50dvw;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            top: 50%;
+            /* left: -20%; */
+            margin-left: 2dvw;
+            margin-top: -2dvw;
+            /* transform: translate(-50%, -50%); */
+            /* background-color: rgba(255, 255, 255, 0.9); */
+            padding: 30px;
+            border-radius: 20px;
+            /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
+        }
+        
+        .registration-form input,
+        .registration-form select {
+            padding: 10px;
+            border: 2px solid #1A5632;
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s;
+            background: transparent;
+            width: 100%;
+            height: 7px;
+            background-color: white;
+        }
+        
+        .registration-form input::placeholder {
+            color: #555;
+        }
+        
+        .registration-form input:focus,
+        .registration-form select:focus {
+            border-color: #2ECC71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+        
+        .submit-btn-rect {
+            background-color: #FF7F00;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 5px; /* Rectangular style */
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            width: 5dvw;
+            margin-left: 120%;
+            margin-top: -7%;
+        }
+        
+        .submit-btn-rect:hover {
+            background-color: #FF9933;
+        }
+        /* Terms checkbox styling */
+        .terms-checkbox {
+            display: flex;
+            align-items: center;
+            margin: 15px 0 5px;
+        }
+        
+        .terms-checkbox input {
+            margin-right: 10px;
+            width: auto;
+        }
+        /* Enhanced terms checkbox */
+        .terms-checkbox {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .terms-checkbox input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .terms-checkbox label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            white-space: nowrap;
+            padding-bottom: 2dvh;
+        }
+        
+        .custom-checkbox {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .terms-checkbox input:checked ~ label .custom-checkbox {
+            background-color: #fff;
+            border-color: #1A5632;
+        }
+        
+        .checkmark {
+            color:#1A5632 ;
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .terms-checkbox input:checked ~ label .checkmark {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .registration-form {
+                width: 85%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container" style="background-color: #1A5632;">
+        <!-- Background image -->
+        <img src="bckgrd.png" alt="Background" class="background-image">
+        
+        <!-- Top layer image -->
+        <img src="pinpt.png" alt="Top Layer" class="top-layer">
+        
+        <!-- Logo in top right -->
+        <img src="logoGreen.png" alt="Logo" class="logo">
+        
+        <!-- Registration Form -->
+        <form class="registration-form">
+            <input type="text" placeholder="First name *" required>
+            <input type="text" placeholder="Last name *" required>
+            <input type="email" placeholder="Email address *" required>
+            <input type="text" placeholder="Country of Residence *" required>
+            <input type="text" placeholder="Citizen of *" required>
+            <input type="tel" placeholder="Mobile phone number *" required>
+            <!-- <input type="email" placeholder="Email address *" required> -->
+            <input type="text" placeholder="Bac Year *" required>
+            <input type="text" placeholder="Program of Interest *" required>
+
+            <div class="terms-checkbox" style="margin-left: 110%;margin-top: -15%;color: white;border-color: white;">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    <span class="custom-checkbox">
+                        <svg class="checkmark" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17L4 12" stroke="#1A5632" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    I have read and agree to the terms and conditions
+                </label>
+            </div>
+            <!-- <button type="submit" class="submit-btn">Submit Application</button> -->
+            <!-- <div class="terms-checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms" style="color: white;">I have read and agree to the terms and conditions</label>
+            </div> -->
+            <button type="submit" class="submit-btn-rect">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

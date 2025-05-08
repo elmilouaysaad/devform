@@ -1,0 +1,240 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.top-layer {
+    position: absolute;
+    z-index: 3;
+    /* Default values */
+    width: 2%;
+    left: 57%;
+    top: 35%;
+    /* Bounce animation */
+    animation: bounce 1.8s cubic-bezier(0.28, 0.84, 0.42, 1) infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scale(1, 1);
+    }
+    10% {
+        transform: translateY(0) scale(1.1, 0.9); /* Squish down */
+    }
+    30% {
+        transform: translateY(-30px) scale(0.9, 1.1); /* Stretch up */
+    }
+    50% {
+        transform: translateY(0) scale(1.05, 0.95); /* Bounce back */
+    }
+    57% {
+        transform: translateY(-7px) scale(1, 1); /* Small rebound */
+    }
+    64% {
+        transform: translateY(0) scale(1, 1); /* Final settle */
+    }
+    100% {
+        transform: translateY(0) scale(1, 1);
+    }
+}
+.top-layer:hover {
+    animation-play-state: paused;
+}
+
+.logo {
+    position: absolute;
+    z-index: 4;
+    right: 30px;
+    top: 30px;
+    width: 150px;
+    height: auto;
+}
+/* 100px interval media queries */
+@media (max-width: 400px) {
+    .top-layer {
+        width: 20%;
+        left: 72% !important;
+        top: 54% !important;
+    }
+}
+/* 100px interval media queries */
+@media (min-width: 400px) {
+    .top-layer {
+        width:20%;
+        left: 70.3% !important;
+        top: 52.3%!important;
+    }
+}
+
+@media (min-width: 500px) {
+    .top-layer {
+        width: 20%;
+        left: 63%!important;
+        top: 46%!important;
+    }
+}
+
+@media (min-width: 600px) {
+    .top-layer {
+        width: 20%;
+        left: 59%!important;
+        top: 39%!important;
+    }
+}
+
+@media (min-width: 700px) {
+    .top-layer {
+        width: 18%;
+        left: 57%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 800px) {
+    .top-layer {
+        width: 17.5%;
+        left: 57%!important;
+        top: 37%!important;
+    }
+}
+
+@media (min-width: 900px) {
+    .top-layer {
+        width: 17%;
+        left: 57%!important;
+        top: 36%!important;
+    }
+}
+
+@media (min-width: 1000px) {
+    .top-layer {
+        width: 16.5%;
+        left: 57%!important;
+        top: 35%!important;
+    }
+}
+
+@media (min-width: 1100px) {
+    .top-layer {
+        width: 16%;
+        left: 57%!important;
+        top: 35%!important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .top-layer {
+        width: 15.5%;
+        left: 57%!important;
+        top: 35%!important;
+    }
+}
+
+@media (min-width: 1300px) {
+    .top-layer {
+        width: 15%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .top-layer {
+        width: 14.5%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1500px) {
+    .top-layer {
+        width: 14%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .top-layer {
+        width: 13.5%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1700px) {
+    .top-layer {
+        width: 13%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1800px) {
+    .top-layer {
+        width: 12.5%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 1900px) {
+    .top-layer {
+        width: 12%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+@media (min-width: 2000px) {
+    .top-layer {
+        width: 11.5%;
+        left: 57.5%!important;
+        top: 38%!important;
+    }
+}
+
+/* Height adjustments for tall screens */
+@media (min-height: 800px) {
+    .top-layer {
+        top: 32%;
+    }
+}
+
+@media (min-height: 900px) {
+    .top-layer {
+        top: 31.5%;
+    }
+}
+
+@media (min-height: 1000px) {
+    .top-layer {
+        top: 31%;
+    }
+}
+
+/* Portrait orientation adjustments */
+@media (orientation: portrait) {
+    .top-layer {
+        width: 22%;
+        left: 64%;
+        top: 33%;
+    }
+}
